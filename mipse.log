@@ -122,6 +122,7 @@ Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Compiling source file /home/ics16/ex1663/arc/contest16/contest/mipse.v
 Opening include file def.h
+Warning:  /home/ics16/ex1663/arc/contest16/contest/mipse.v:183: signed to unsigned assignment occurs. (VER-318)
 
 Inferred memory devices in process
 	in routine mipse line 22 in file
@@ -133,21 +134,19 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 137 in file
+	in routine mipse line 193 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    memtoregE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    regwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|       rtE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-|       rdE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    memwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|       rsE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    writeregM_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     aluoutM_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   writedataM_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    memtoregM_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 209 in file
+	in routine mipse line 221 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -177,7 +176,21 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 124 in file
+	in routine mipse line 142 in file
+		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    memtoregE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    regwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       rtE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       rdE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    memwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       rsE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mipse line 128 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -186,6 +199,7 @@ Inferred memory devices in process
 |     alucomE_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
 |    slti_opE_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |     regdstE_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    grade_opE_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |      rd1E_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
 |      rd2E_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
 |    mult_opE_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
@@ -193,19 +207,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 182 in file
-		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    writeregM_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
-|     aluoutM_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|   writedataM_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|    memtoregM_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine mipse line 192 in file
+	in routine mipse line 204 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -215,13 +217,14 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 216 in file
+	in routine mipse line 228 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |    regwriteW_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
 Presto compilation completed successfully.
 Current design is now '/home/ics16/ex1663/arc/contest16/contest/mipse.db:mipse'
 Loaded 1 design.
@@ -260,7 +263,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 6 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -275,6 +278,10 @@ Information: Updating design information... (UID-85)
 
   Beginning Implementation Selection
   ----------------------------------
+  Processing 'mipse_DW01_cmp2_0'
+  Processing 'mipse_DW01_cmp2_1'
+  Processing 'mipse_DW01_cmp2_2'
+  Processing 'mipse_DW01_cmp2_3'
   Processing 'mipse_DW01_cmp6_0'
   Processing 'mipse_DW01_cmp6_1'
   Processing 'mipse_DW01_cmp6_2'
@@ -299,17 +306,17 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:15  412193.0      0.00       0.0     141.0                          
-    0:00:16  400537.0      0.00       0.0     141.0                          
-    0:00:16  400537.0      0.00       0.0     141.0                          
-    0:00:16  400537.0      0.00       0.0     141.0                          
-    0:00:16  400537.0      0.00       0.0     141.0                          
-    0:00:16  400537.0      0.00       0.0     141.0                          
-    0:00:17  400569.0      0.00       0.0     132.0                          
-    0:00:17  400585.0      0.00       0.0     128.0                          
-    0:00:17  400585.0      0.00       0.0     128.0                          
-    0:00:17  400585.0      0.00       0.0     128.0                          
-    0:00:17  400585.0      0.00       0.0     128.0                          
+    0:00:16  415322.0      0.00       0.0     143.0                          
+    0:00:16  403738.0      0.00       0.0     143.0                          
+    0:00:17  403738.0      0.00       0.0     143.0                          
+    0:00:17  403738.0      0.00       0.0     143.0                          
+    0:00:17  403738.0      0.00       0.0     143.0                          
+    0:00:17  403738.0      0.00       0.0     143.0                          
+    0:00:17  403786.0      0.00       0.0     131.0                          
+    0:00:18  403802.0      0.00       0.0     128.0                          
+    0:00:18  403802.0      0.00       0.0     128.0                          
+    0:00:18  403802.0      0.00       0.0     128.0                          
+    0:00:18  403802.0      0.00       0.0     128.0                          
 
 
   Beginning Delay Optimization Phase
@@ -318,7 +325,7 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:17  400585.0      0.00       0.0     128.0                          
+    0:00:18  403802.0      0.00       0.0     128.0                          
 
 
   Beginning Design Rule Fixing  (max_fanout)
@@ -327,8 +334,8 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:17  400585.0      0.00       0.0     128.0                          
-    0:00:18  401097.0      0.00       0.0       0.0                          
+    0:00:18  403802.0      0.00       0.0     128.0                          
+    0:00:19  404314.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (max_area 0)
@@ -337,32 +344,32 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:18  401097.0      0.00       0.0       0.0                          
-    0:00:18  401097.0      0.00       0.0       0.0                          
-    0:00:19  399577.0      0.00       0.0       0.0                          
-    0:00:20  399465.0      0.00       0.0       0.0                          
-    0:00:20  399433.0      0.00       0.0       0.0                          
-    0:00:20  399369.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:20  399353.0      0.00       0.0       0.0                          
-    0:00:24  396497.0      0.00       0.0       0.0                          
-    0:00:24  396497.0      0.00       0.0       0.0                          
-    0:00:24  396497.0      0.00       0.0       0.0                          
-    0:00:24  396497.0      0.00       0.0       0.0                          
-    0:00:24  396497.0      0.00       0.0       0.0                          
-    0:00:24  396497.0      0.00       0.0       0.0                          
+    0:00:19  404314.0      0.00       0.0       0.0                          
+    0:00:19  404314.0      0.00       0.0       0.0                          
+    0:00:20  402802.0      0.00       0.0       0.0                          
+    0:00:21  402674.0      0.00       0.0       0.0                          
+    0:00:21  402610.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:21  402546.0      0.00       0.0       0.0                          
+    0:00:25  399714.0      0.00       0.0       0.0                          
+    0:00:25  399714.0      0.00       0.0       0.0                          
+    0:00:25  399714.0      0.00       0.0       0.0                          
+    0:00:25  399714.0      0.00       0.0       0.0                          
+    0:00:25  399714.0      0.00       0.0       0.0                          
+    0:00:25  399714.0      0.00       0.0       0.0                          
 Loading db file '/home/cad/lib/osu_stdcells/lib/tsmc018/lib/osu018_stdcells.db'
 
   Optimization Complete
   ---------------------
 Warning: Design 'mipse' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-     Net 'clk': 1387 load(s), 1 driver(s)
+     Net 'clk': 1388 load(s), 1 driver(s)
 1
 redirect ./log/mipse.max.timing.log { report_timing -delay max -max_paths 3 }
 redirect ./log/mipse.power.log { report_power }
@@ -373,6 +380,5 @@ Warning: Verilog writer has added 16 nets to module mipse_DW02_mult_0 using SYNO
 Warning: Verilog writer has added 16 nets to module mipse using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
 1
 quit
-Information: Defining new variable 'LIB_MAX_FILE'. (CMD-041)
 
 Thank you...

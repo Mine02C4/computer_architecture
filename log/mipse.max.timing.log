@@ -8,7 +8,7 @@ Report : timing
         -max_paths 3
 Design : mipse
 Version: Z-2007.03-SP4
-Date   : Tue Aug  2 01:06:35 2016
+Date   : Tue Aug  2 02:30:34 2016
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -16,7 +16,7 @@ Date   : Tue Aug  2 01:06:35 2016
 Operating Conditions: typical   Library: osu018_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: rtE_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: rtE_reg[0] (rising edge-triggered flip-flop clocked by clk)
   Endpoint: aluoutM_reg[0]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
@@ -26,64 +26,65 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  rtE_reg[1]/CLK (DFFSR)                                  0.00 #     0.00 r
-  rtE_reg[1]/Q (DFFSR)                                    0.36       0.36 f
-  U1371/Y (INVX1)                                         0.23       0.60 r
-  U1383/Y (OAI22X1)                                       0.08       0.68 f
-  U1385/Y (NAND3X1)                                       0.09       0.78 r
-  U1389/Y (NOR2X1)                                        0.08       0.85 f
-  U162/Y (NAND3X1)                                        0.40       1.25 r
-  U1335/Y (INVX2)                                         0.13       1.38 f
-  U1306/Y (INVX2)                                         0.22       1.61 r
-  U1304/Y (NAND2X1)                                       0.13       1.74 f
-  U1271/Y (INVX2)                                         0.25       1.99 r
-  U157/Y (AOI22X1)                                        0.08       2.07 f
-  U156/Y (OAI21X1)                                        0.10       2.17 r
-  U155/Y (AOI22X1)                                        0.07       2.24 f
-  U154/Y (INVX2)                                          0.15       2.39 r
-  alu_1/b[0] (alu)                                        0.00       2.39 r
-  alu_1/sub_8/B[0] (alu_DW01_sub_0)                       0.00       2.39 r
-  alu_1/sub_8/U34/Y (INVX1)                               0.13       2.52 f
-  alu_1/sub_8/U1/Y (OR2X1)                                0.15       2.67 f
-  alu_1/sub_8/U2_1/YC (FAX1)                              0.21       2.88 f
-  alu_1/sub_8/U2_2/YC (FAX1)                              0.21       3.09 f
-  alu_1/sub_8/U2_3/YC (FAX1)                              0.21       3.30 f
-  alu_1/sub_8/U2_4/YC (FAX1)                              0.21       3.52 f
-  alu_1/sub_8/U2_5/YC (FAX1)                              0.21       3.73 f
-  alu_1/sub_8/U2_6/YC (FAX1)                              0.21       3.95 f
-  alu_1/sub_8/U2_7/YC (FAX1)                              0.21       4.16 f
-  alu_1/sub_8/U2_8/YC (FAX1)                              0.21       4.37 f
-  alu_1/sub_8/U2_9/YC (FAX1)                              0.21       4.59 f
-  alu_1/sub_8/U2_10/YC (FAX1)                             0.21       4.80 f
-  alu_1/sub_8/U2_11/YC (FAX1)                             0.21       5.02 f
-  alu_1/sub_8/U2_12/YC (FAX1)                             0.21       5.23 f
-  alu_1/sub_8/U2_13/YC (FAX1)                             0.21       5.45 f
-  alu_1/sub_8/U2_14/YC (FAX1)                             0.21       5.66 f
-  alu_1/sub_8/U2_15/YC (FAX1)                             0.21       5.87 f
-  alu_1/sub_8/U2_16/YC (FAX1)                             0.21       6.09 f
-  alu_1/sub_8/U2_17/YC (FAX1)                             0.21       6.30 f
-  alu_1/sub_8/U2_18/YC (FAX1)                             0.21       6.51 f
-  alu_1/sub_8/U2_19/YC (FAX1)                             0.21       6.73 f
-  alu_1/sub_8/U2_20/YC (FAX1)                             0.21       6.94 f
-  alu_1/sub_8/U2_21/YC (FAX1)                             0.21       7.16 f
-  alu_1/sub_8/U2_22/YC (FAX1)                             0.21       7.37 f
-  alu_1/sub_8/U2_23/YC (FAX1)                             0.21       7.58 f
-  alu_1/sub_8/U2_24/YC (FAX1)                             0.21       7.80 f
-  alu_1/sub_8/U2_25/YC (FAX1)                             0.21       8.01 f
-  alu_1/sub_8/U2_26/YC (FAX1)                             0.21       8.22 f
-  alu_1/sub_8/U2_27/YC (FAX1)                             0.21       8.44 f
-  alu_1/sub_8/U2_28/YC (FAX1)                             0.21       8.65 f
-  alu_1/sub_8/U2_29/YC (FAX1)                             0.21       8.86 f
-  alu_1/sub_8/U2_30/YC (FAX1)                             0.21       9.08 f
-  alu_1/sub_8/U2_31/YS (FAX1)                             0.23       9.31 r
-  alu_1/sub_8/DIFF[31] (alu_DW01_sub_0)                   0.00       9.31 r
-  alu_1/U216/Y (AOI22X1)                                  0.07       9.38 f
-  alu_1/U210/Y (NAND2X1)                                  0.15       9.53 r
-  alu_1/y[31] (alu)                                       0.00       9.53 r
-  U1075/Y (INVX2)                                         0.05       9.58 f
-  U1070/Y (OAI21X1)                                       0.07       9.65 r
-  aluoutM_reg[0]/D (DFFPOSX1)                             0.00       9.65 r
-  data arrival time                                                  9.65
+  rtE_reg[0]/CLK (DFFSR)                                  0.00 #     0.00 r
+  rtE_reg[0]/Q (DFFSR)                                    0.27       0.27 f
+  U1278/Y (INVX2)                                         0.15       0.42 r
+  U1508/Y (AND2X1)                                        0.13       0.55 r
+  U1509/Y (OAI22X1)                                       0.08       0.62 f
+  U1511/Y (NAND3X1)                                       0.09       0.71 r
+  U1515/Y (NOR2X1)                                        0.08       0.79 f
+  U170/Y (NAND3X1)                                        0.40       1.19 r
+  U1365/Y (INVX2)                                         0.13       1.32 f
+  U1340/Y (INVX2)                                         0.22       1.54 r
+  U1338/Y (NAND2X1)                                       0.13       1.68 f
+  U1304/Y (INVX2)                                         0.25       1.93 r
+  U165/Y (AOI22X1)                                        0.08       2.01 f
+  U164/Y (OAI21X1)                                        0.10       2.11 r
+  U163/Y (AOI22X1)                                        0.07       2.18 f
+  U162/Y (INVX2)                                          0.15       2.33 r
+  alu_1/b[0] (alu)                                        0.00       2.33 r
+  alu_1/sub_8/B[0] (alu_DW01_sub_0)                       0.00       2.33 r
+  alu_1/sub_8/U34/Y (INVX1)                               0.13       2.46 f
+  alu_1/sub_8/U1/Y (OR2X1)                                0.15       2.60 f
+  alu_1/sub_8/U2_1/YC (FAX1)                              0.21       2.82 f
+  alu_1/sub_8/U2_2/YC (FAX1)                              0.21       3.03 f
+  alu_1/sub_8/U2_3/YC (FAX1)                              0.21       3.24 f
+  alu_1/sub_8/U2_4/YC (FAX1)                              0.21       3.46 f
+  alu_1/sub_8/U2_5/YC (FAX1)                              0.21       3.67 f
+  alu_1/sub_8/U2_6/YC (FAX1)                              0.21       3.89 f
+  alu_1/sub_8/U2_7/YC (FAX1)                              0.21       4.10 f
+  alu_1/sub_8/U2_8/YC (FAX1)                              0.21       4.32 f
+  alu_1/sub_8/U2_9/YC (FAX1)                              0.21       4.53 f
+  alu_1/sub_8/U2_10/YC (FAX1)                             0.21       4.75 f
+  alu_1/sub_8/U2_11/YC (FAX1)                             0.21       4.96 f
+  alu_1/sub_8/U2_12/YC (FAX1)                             0.21       5.17 f
+  alu_1/sub_8/U2_13/YC (FAX1)                             0.21       5.39 f
+  alu_1/sub_8/U2_14/YC (FAX1)                             0.21       5.60 f
+  alu_1/sub_8/U2_15/YC (FAX1)                             0.21       5.82 f
+  alu_1/sub_8/U2_16/YC (FAX1)                             0.21       6.03 f
+  alu_1/sub_8/U2_17/YC (FAX1)                             0.21       6.25 f
+  alu_1/sub_8/U2_18/YC (FAX1)                             0.21       6.46 f
+  alu_1/sub_8/U2_19/YC (FAX1)                             0.21       6.68 f
+  alu_1/sub_8/U2_20/YC (FAX1)                             0.21       6.89 f
+  alu_1/sub_8/U2_21/YC (FAX1)                             0.21       7.10 f
+  alu_1/sub_8/U2_22/YC (FAX1)                             0.21       7.32 f
+  alu_1/sub_8/U2_23/YC (FAX1)                             0.21       7.53 f
+  alu_1/sub_8/U2_24/YC (FAX1)                             0.21       7.75 f
+  alu_1/sub_8/U2_25/YC (FAX1)                             0.21       7.96 f
+  alu_1/sub_8/U2_26/YC (FAX1)                             0.21       8.18 f
+  alu_1/sub_8/U2_27/YC (FAX1)                             0.21       8.39 f
+  alu_1/sub_8/U2_28/YC (FAX1)                             0.21       8.60 f
+  alu_1/sub_8/U2_29/YC (FAX1)                             0.21       8.82 f
+  alu_1/sub_8/U2_30/YC (FAX1)                             0.21       9.03 f
+  alu_1/sub_8/U2_31/YS (FAX1)                             0.23       9.27 r
+  alu_1/sub_8/DIFF[31] (alu_DW01_sub_0)                   0.00       9.27 r
+  alu_1/U216/Y (AOI22X1)                                  0.07       9.34 f
+  alu_1/U210/Y (NAND2X1)                                  0.15       9.48 r
+  alu_1/y[31] (alu)                                       0.00       9.48 r
+  U1091/Y (AOI22X1)                                       0.06       9.54 f
+  U1079/Y (NAND2X1)                                       0.07       9.62 r
+  aluoutM_reg[0]/D (DFFPOSX1)                             0.00       9.62 r
+  data arrival time                                                  9.62
 
   clock clk (rise edge)                                   9.85       9.85
   clock network delay (ideal)                             0.00       9.85
@@ -92,12 +93,12 @@ Wire Load Model Mode: top
   data required time                                                 9.67
   --------------------------------------------------------------------------
   data required time                                                 9.67
-  data arrival time                                                 -9.65
+  data arrival time                                                 -9.62
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.02
+  slack (MET)                                                        0.05
 
 
-  Startpoint: rtE_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: rtE_reg[0] (rising edge-triggered flip-flop clocked by clk)
   Endpoint: aluoutM_reg[31]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
@@ -107,63 +108,64 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  rtE_reg[1]/CLK (DFFSR)                                  0.00 #     0.00 r
-  rtE_reg[1]/Q (DFFSR)                                    0.36       0.36 f
-  U1371/Y (INVX1)                                         0.23       0.60 r
-  U1383/Y (OAI22X1)                                       0.08       0.68 f
-  U1385/Y (NAND3X1)                                       0.09       0.78 r
-  U1389/Y (NOR2X1)                                        0.08       0.85 f
-  U162/Y (NAND3X1)                                        0.40       1.25 r
-  U1335/Y (INVX2)                                         0.13       1.38 f
-  U1306/Y (INVX2)                                         0.22       1.61 r
-  U1304/Y (NAND2X1)                                       0.13       1.74 f
-  U1271/Y (INVX2)                                         0.25       1.99 r
-  U157/Y (AOI22X1)                                        0.08       2.07 f
-  U156/Y (OAI21X1)                                        0.10       2.17 r
-  U155/Y (AOI22X1)                                        0.07       2.24 f
-  U154/Y (INVX2)                                          0.15       2.39 r
-  alu_1/b[0] (alu)                                        0.00       2.39 r
-  alu_1/sub_8/B[0] (alu_DW01_sub_0)                       0.00       2.39 r
-  alu_1/sub_8/U34/Y (INVX1)                               0.13       2.52 f
-  alu_1/sub_8/U1/Y (OR2X1)                                0.15       2.67 f
-  alu_1/sub_8/U2_1/YC (FAX1)                              0.21       2.88 f
-  alu_1/sub_8/U2_2/YC (FAX1)                              0.21       3.09 f
-  alu_1/sub_8/U2_3/YC (FAX1)                              0.21       3.30 f
-  alu_1/sub_8/U2_4/YC (FAX1)                              0.21       3.52 f
-  alu_1/sub_8/U2_5/YC (FAX1)                              0.21       3.73 f
-  alu_1/sub_8/U2_6/YC (FAX1)                              0.21       3.95 f
-  alu_1/sub_8/U2_7/YC (FAX1)                              0.21       4.16 f
-  alu_1/sub_8/U2_8/YC (FAX1)                              0.21       4.37 f
-  alu_1/sub_8/U2_9/YC (FAX1)                              0.21       4.59 f
-  alu_1/sub_8/U2_10/YC (FAX1)                             0.21       4.80 f
-  alu_1/sub_8/U2_11/YC (FAX1)                             0.21       5.02 f
-  alu_1/sub_8/U2_12/YC (FAX1)                             0.21       5.23 f
-  alu_1/sub_8/U2_13/YC (FAX1)                             0.21       5.45 f
-  alu_1/sub_8/U2_14/YC (FAX1)                             0.21       5.66 f
-  alu_1/sub_8/U2_15/YC (FAX1)                             0.21       5.87 f
-  alu_1/sub_8/U2_16/YC (FAX1)                             0.21       6.09 f
-  alu_1/sub_8/U2_17/YC (FAX1)                             0.21       6.30 f
-  alu_1/sub_8/U2_18/YC (FAX1)                             0.21       6.51 f
-  alu_1/sub_8/U2_19/YC (FAX1)                             0.21       6.73 f
-  alu_1/sub_8/U2_20/YC (FAX1)                             0.21       6.94 f
-  alu_1/sub_8/U2_21/YC (FAX1)                             0.21       7.16 f
-  alu_1/sub_8/U2_22/YC (FAX1)                             0.21       7.37 f
-  alu_1/sub_8/U2_23/YC (FAX1)                             0.21       7.58 f
-  alu_1/sub_8/U2_24/YC (FAX1)                             0.21       7.80 f
-  alu_1/sub_8/U2_25/YC (FAX1)                             0.21       8.01 f
-  alu_1/sub_8/U2_26/YC (FAX1)                             0.21       8.22 f
-  alu_1/sub_8/U2_27/YC (FAX1)                             0.21       8.44 f
-  alu_1/sub_8/U2_28/YC (FAX1)                             0.21       8.65 f
-  alu_1/sub_8/U2_29/YC (FAX1)                             0.21       8.86 f
-  alu_1/sub_8/U2_30/YC (FAX1)                             0.21       9.08 f
-  alu_1/sub_8/U2_31/YS (FAX1)                             0.23       9.31 r
-  alu_1/sub_8/DIFF[31] (alu_DW01_sub_0)                   0.00       9.31 r
-  alu_1/U216/Y (AOI22X1)                                  0.07       9.38 f
-  alu_1/U210/Y (NAND2X1)                                  0.15       9.53 r
-  alu_1/y[31] (alu)                                       0.00       9.53 r
-  U1024/Y (AND2X1)                                        0.08       9.60 r
-  aluoutM_reg[31]/D (DFFPOSX1)                            0.00       9.60 r
-  data arrival time                                                  9.60
+  rtE_reg[0]/CLK (DFFSR)                                  0.00 #     0.00 r
+  rtE_reg[0]/Q (DFFSR)                                    0.27       0.27 f
+  U1278/Y (INVX2)                                         0.15       0.42 r
+  U1508/Y (AND2X1)                                        0.13       0.55 r
+  U1509/Y (OAI22X1)                                       0.08       0.62 f
+  U1511/Y (NAND3X1)                                       0.09       0.71 r
+  U1515/Y (NOR2X1)                                        0.08       0.79 f
+  U170/Y (NAND3X1)                                        0.40       1.19 r
+  U1365/Y (INVX2)                                         0.13       1.32 f
+  U1340/Y (INVX2)                                         0.22       1.54 r
+  U1338/Y (NAND2X1)                                       0.13       1.68 f
+  U1304/Y (INVX2)                                         0.25       1.93 r
+  U165/Y (AOI22X1)                                        0.08       2.01 f
+  U164/Y (OAI21X1)                                        0.10       2.11 r
+  U163/Y (AOI22X1)                                        0.07       2.18 f
+  U162/Y (INVX2)                                          0.15       2.33 r
+  alu_1/b[0] (alu)                                        0.00       2.33 r
+  alu_1/sub_8/B[0] (alu_DW01_sub_0)                       0.00       2.33 r
+  alu_1/sub_8/U34/Y (INVX1)                               0.13       2.46 f
+  alu_1/sub_8/U1/Y (OR2X1)                                0.15       2.60 f
+  alu_1/sub_8/U2_1/YC (FAX1)                              0.21       2.82 f
+  alu_1/sub_8/U2_2/YC (FAX1)                              0.21       3.03 f
+  alu_1/sub_8/U2_3/YC (FAX1)                              0.21       3.24 f
+  alu_1/sub_8/U2_4/YC (FAX1)                              0.21       3.46 f
+  alu_1/sub_8/U2_5/YC (FAX1)                              0.21       3.67 f
+  alu_1/sub_8/U2_6/YC (FAX1)                              0.21       3.89 f
+  alu_1/sub_8/U2_7/YC (FAX1)                              0.21       4.10 f
+  alu_1/sub_8/U2_8/YC (FAX1)                              0.21       4.32 f
+  alu_1/sub_8/U2_9/YC (FAX1)                              0.21       4.53 f
+  alu_1/sub_8/U2_10/YC (FAX1)                             0.21       4.75 f
+  alu_1/sub_8/U2_11/YC (FAX1)                             0.21       4.96 f
+  alu_1/sub_8/U2_12/YC (FAX1)                             0.21       5.17 f
+  alu_1/sub_8/U2_13/YC (FAX1)                             0.21       5.39 f
+  alu_1/sub_8/U2_14/YC (FAX1)                             0.21       5.60 f
+  alu_1/sub_8/U2_15/YC (FAX1)                             0.21       5.82 f
+  alu_1/sub_8/U2_16/YC (FAX1)                             0.21       6.03 f
+  alu_1/sub_8/U2_17/YC (FAX1)                             0.21       6.25 f
+  alu_1/sub_8/U2_18/YC (FAX1)                             0.21       6.46 f
+  alu_1/sub_8/U2_19/YC (FAX1)                             0.21       6.68 f
+  alu_1/sub_8/U2_20/YC (FAX1)                             0.21       6.89 f
+  alu_1/sub_8/U2_21/YC (FAX1)                             0.21       7.10 f
+  alu_1/sub_8/U2_22/YC (FAX1)                             0.21       7.32 f
+  alu_1/sub_8/U2_23/YC (FAX1)                             0.21       7.53 f
+  alu_1/sub_8/U2_24/YC (FAX1)                             0.21       7.75 f
+  alu_1/sub_8/U2_25/YC (FAX1)                             0.21       7.96 f
+  alu_1/sub_8/U2_26/YC (FAX1)                             0.21       8.18 f
+  alu_1/sub_8/U2_27/YC (FAX1)                             0.21       8.39 f
+  alu_1/sub_8/U2_28/YC (FAX1)                             0.21       8.60 f
+  alu_1/sub_8/U2_29/YC (FAX1)                             0.21       8.82 f
+  alu_1/sub_8/U2_30/YC (FAX1)                             0.21       9.03 f
+  alu_1/sub_8/U2_31/YS (FAX1)                             0.23       9.27 r
+  alu_1/sub_8/DIFF[31] (alu_DW01_sub_0)                   0.00       9.27 r
+  alu_1/U216/Y (AOI22X1)                                  0.07       9.34 f
+  alu_1/U210/Y (NAND2X1)                                  0.15       9.48 r
+  alu_1/y[31] (alu)                                       0.00       9.48 r
+  U1027/Y (AND2X1)                                        0.08       9.56 r
+  aluoutM_reg[31]/D (DFFPOSX1)                            0.00       9.56 r
+  data arrival time                                                  9.56
 
   clock clk (rise edge)                                   9.85       9.85
   clock network delay (ideal)                             0.00       9.85
@@ -172,12 +174,12 @@ Wire Load Model Mode: top
   data required time                                                 9.66
   --------------------------------------------------------------------------
   data required time                                                 9.66
-  data arrival time                                                 -9.60
+  data arrival time                                                 -9.56
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.06
+  slack (MET)                                                        0.10
 
 
-  Startpoint: rtE_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: rtE_reg[0] (rising edge-triggered flip-flop clocked by clk)
   Endpoint: aluoutM_reg[30]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
@@ -187,62 +189,63 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  rtE_reg[1]/CLK (DFFSR)                                  0.00 #     0.00 r
-  rtE_reg[1]/Q (DFFSR)                                    0.36       0.36 f
-  U1371/Y (INVX1)                                         0.23       0.60 r
-  U1383/Y (OAI22X1)                                       0.08       0.68 f
-  U1385/Y (NAND3X1)                                       0.09       0.78 r
-  U1389/Y (NOR2X1)                                        0.08       0.85 f
-  U162/Y (NAND3X1)                                        0.40       1.25 r
-  U1335/Y (INVX2)                                         0.13       1.38 f
-  U1306/Y (INVX2)                                         0.22       1.61 r
-  U1304/Y (NAND2X1)                                       0.13       1.74 f
-  U1271/Y (INVX2)                                         0.25       1.99 r
-  U157/Y (AOI22X1)                                        0.08       2.07 f
-  U156/Y (OAI21X1)                                        0.10       2.17 r
-  U155/Y (AOI22X1)                                        0.07       2.24 f
-  U154/Y (INVX2)                                          0.15       2.39 r
-  alu_1/b[0] (alu)                                        0.00       2.39 r
-  alu_1/sub_8/B[0] (alu_DW01_sub_0)                       0.00       2.39 r
-  alu_1/sub_8/U34/Y (INVX1)                               0.13       2.52 f
-  alu_1/sub_8/U1/Y (OR2X1)                                0.15       2.67 f
-  alu_1/sub_8/U2_1/YC (FAX1)                              0.21       2.88 f
-  alu_1/sub_8/U2_2/YC (FAX1)                              0.21       3.09 f
-  alu_1/sub_8/U2_3/YC (FAX1)                              0.21       3.30 f
-  alu_1/sub_8/U2_4/YC (FAX1)                              0.21       3.52 f
-  alu_1/sub_8/U2_5/YC (FAX1)                              0.21       3.73 f
-  alu_1/sub_8/U2_6/YC (FAX1)                              0.21       3.95 f
-  alu_1/sub_8/U2_7/YC (FAX1)                              0.21       4.16 f
-  alu_1/sub_8/U2_8/YC (FAX1)                              0.21       4.37 f
-  alu_1/sub_8/U2_9/YC (FAX1)                              0.21       4.59 f
-  alu_1/sub_8/U2_10/YC (FAX1)                             0.21       4.80 f
-  alu_1/sub_8/U2_11/YC (FAX1)                             0.21       5.02 f
-  alu_1/sub_8/U2_12/YC (FAX1)                             0.21       5.23 f
-  alu_1/sub_8/U2_13/YC (FAX1)                             0.21       5.45 f
-  alu_1/sub_8/U2_14/YC (FAX1)                             0.21       5.66 f
-  alu_1/sub_8/U2_15/YC (FAX1)                             0.21       5.87 f
-  alu_1/sub_8/U2_16/YC (FAX1)                             0.21       6.09 f
-  alu_1/sub_8/U2_17/YC (FAX1)                             0.21       6.30 f
-  alu_1/sub_8/U2_18/YC (FAX1)                             0.21       6.51 f
-  alu_1/sub_8/U2_19/YC (FAX1)                             0.21       6.73 f
-  alu_1/sub_8/U2_20/YC (FAX1)                             0.21       6.94 f
-  alu_1/sub_8/U2_21/YC (FAX1)                             0.21       7.16 f
-  alu_1/sub_8/U2_22/YC (FAX1)                             0.21       7.37 f
-  alu_1/sub_8/U2_23/YC (FAX1)                             0.21       7.58 f
-  alu_1/sub_8/U2_24/YC (FAX1)                             0.21       7.80 f
-  alu_1/sub_8/U2_25/YC (FAX1)                             0.21       8.01 f
-  alu_1/sub_8/U2_26/YC (FAX1)                             0.21       8.22 f
-  alu_1/sub_8/U2_27/YC (FAX1)                             0.21       8.44 f
-  alu_1/sub_8/U2_28/YC (FAX1)                             0.21       8.65 f
-  alu_1/sub_8/U2_29/YC (FAX1)                             0.21       8.86 f
-  alu_1/sub_8/U2_30/YS (FAX1)                             0.23       9.10 r
-  alu_1/sub_8/DIFF[30] (alu_DW01_sub_0)                   0.00       9.10 r
-  alu_1/U293/Y (AOI22X1)                                  0.07       9.17 f
-  alu_1/U287/Y (NAND2X1)                                  0.11       9.28 r
-  alu_1/y[30] (alu)                                       0.00       9.28 r
-  U1025/Y (AND2X1)                                        0.07       9.35 r
-  aluoutM_reg[30]/D (DFFPOSX1)                            0.00       9.35 r
-  data arrival time                                                  9.35
+  rtE_reg[0]/CLK (DFFSR)                                  0.00 #     0.00 r
+  rtE_reg[0]/Q (DFFSR)                                    0.27       0.27 f
+  U1278/Y (INVX2)                                         0.15       0.42 r
+  U1508/Y (AND2X1)                                        0.13       0.55 r
+  U1509/Y (OAI22X1)                                       0.08       0.62 f
+  U1511/Y (NAND3X1)                                       0.09       0.71 r
+  U1515/Y (NOR2X1)                                        0.08       0.79 f
+  U170/Y (NAND3X1)                                        0.40       1.19 r
+  U1365/Y (INVX2)                                         0.13       1.32 f
+  U1340/Y (INVX2)                                         0.22       1.54 r
+  U1338/Y (NAND2X1)                                       0.13       1.68 f
+  U1304/Y (INVX2)                                         0.25       1.93 r
+  U165/Y (AOI22X1)                                        0.08       2.01 f
+  U164/Y (OAI21X1)                                        0.10       2.11 r
+  U163/Y (AOI22X1)                                        0.07       2.18 f
+  U162/Y (INVX2)                                          0.15       2.33 r
+  alu_1/b[0] (alu)                                        0.00       2.33 r
+  alu_1/sub_8/B[0] (alu_DW01_sub_0)                       0.00       2.33 r
+  alu_1/sub_8/U34/Y (INVX1)                               0.13       2.46 f
+  alu_1/sub_8/U1/Y (OR2X1)                                0.15       2.60 f
+  alu_1/sub_8/U2_1/YC (FAX1)                              0.21       2.82 f
+  alu_1/sub_8/U2_2/YC (FAX1)                              0.21       3.03 f
+  alu_1/sub_8/U2_3/YC (FAX1)                              0.21       3.24 f
+  alu_1/sub_8/U2_4/YC (FAX1)                              0.21       3.46 f
+  alu_1/sub_8/U2_5/YC (FAX1)                              0.21       3.67 f
+  alu_1/sub_8/U2_6/YC (FAX1)                              0.21       3.89 f
+  alu_1/sub_8/U2_7/YC (FAX1)                              0.21       4.10 f
+  alu_1/sub_8/U2_8/YC (FAX1)                              0.21       4.32 f
+  alu_1/sub_8/U2_9/YC (FAX1)                              0.21       4.53 f
+  alu_1/sub_8/U2_10/YC (FAX1)                             0.21       4.75 f
+  alu_1/sub_8/U2_11/YC (FAX1)                             0.21       4.96 f
+  alu_1/sub_8/U2_12/YC (FAX1)                             0.21       5.17 f
+  alu_1/sub_8/U2_13/YC (FAX1)                             0.21       5.39 f
+  alu_1/sub_8/U2_14/YC (FAX1)                             0.21       5.60 f
+  alu_1/sub_8/U2_15/YC (FAX1)                             0.21       5.82 f
+  alu_1/sub_8/U2_16/YC (FAX1)                             0.21       6.03 f
+  alu_1/sub_8/U2_17/YC (FAX1)                             0.21       6.25 f
+  alu_1/sub_8/U2_18/YC (FAX1)                             0.21       6.46 f
+  alu_1/sub_8/U2_19/YC (FAX1)                             0.21       6.68 f
+  alu_1/sub_8/U2_20/YC (FAX1)                             0.21       6.89 f
+  alu_1/sub_8/U2_21/YC (FAX1)                             0.21       7.10 f
+  alu_1/sub_8/U2_22/YC (FAX1)                             0.21       7.32 f
+  alu_1/sub_8/U2_23/YC (FAX1)                             0.21       7.53 f
+  alu_1/sub_8/U2_24/YC (FAX1)                             0.21       7.75 f
+  alu_1/sub_8/U2_25/YC (FAX1)                             0.21       7.96 f
+  alu_1/sub_8/U2_26/YC (FAX1)                             0.21       8.18 f
+  alu_1/sub_8/U2_27/YC (FAX1)                             0.21       8.39 f
+  alu_1/sub_8/U2_28/YC (FAX1)                             0.21       8.60 f
+  alu_1/sub_8/U2_29/YC (FAX1)                             0.21       8.82 f
+  alu_1/sub_8/U2_30/YS (FAX1)                             0.23       9.05 r
+  alu_1/sub_8/DIFF[30] (alu_DW01_sub_0)                   0.00       9.05 r
+  alu_1/U293/Y (AOI22X1)                                  0.07       9.12 f
+  alu_1/U287/Y (NAND2X1)                                  0.11       9.23 r
+  alu_1/y[30] (alu)                                       0.00       9.23 r
+  U1028/Y (AND2X1)                                        0.07       9.30 r
+  aluoutM_reg[30]/D (DFFPOSX1)                            0.00       9.30 r
+  data arrival time                                                  9.30
 
   clock clk (rise edge)                                   9.85       9.85
   clock network delay (ideal)                             0.00       9.85
@@ -251,9 +254,9 @@ Wire Load Model Mode: top
   data required time                                                 9.66
   --------------------------------------------------------------------------
   data required time                                                 9.66
-  data arrival time                                                 -9.35
+  data arrival time                                                 -9.30
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.31
+  slack (MET)                                                        0.36
 
 
 1
