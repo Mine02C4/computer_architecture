@@ -1,0 +1,267 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'mipse' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : mipse
+Version: Z-2007.03-SP4
+Date   : Mon Aug  1 18:35:31 2016
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: osu018_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: rtE_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: aluoutM_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  rtE_reg[2]/CLK (DFFSR)                                  0.00 #     0.00 r
+  rtE_reg[2]/Q (DFFSR)                                    0.26       0.26 f
+  U1232/Y (INVX1)                                         0.06       0.32 r
+  U1231/Y (INVX1)                                         0.06       0.37 f
+  U1233/Y (NOR3X1)                                        0.08       0.46 r
+  U1235/Y (NAND2X1)                                       0.05       0.51 f
+  U1240/Y (NAND3X1)                                       0.07       0.58 r
+  U1242/Y (INVX1)                                         0.05       0.63 f
+  U1241/Y (NAND2X1)                                       0.08       0.71 r
+  U1244/Y (INVX1)                                         0.08       0.79 f
+  U1252/Y (INVX1)                                         0.06       0.85 r
+  U1250/Y (NOR2X1)                                        0.06       0.91 f
+  U1253/Y (AOI22X1)                                       0.08       0.99 r
+  U1257/Y (AND2X1)                                        0.08       1.07 r
+  U1256/Y (NAND2X1)                                       0.08       1.15 f
+  alu_1/b[28] (alu)                                       0.00       1.15 f
+  alu_1/mult_8/B[28] (alu_DW02_mult_0)                    0.00       1.15 f
+  alu_1/mult_8/U23/Y (AND2X2)                             0.14       1.29 f
+  alu_1/mult_8/U18/Y (XOR2X1)                             0.14       1.44 r
+  alu_1/mult_8/U17/Y (XNOR2X1)                            0.14       1.57 r
+  alu_1/mult_8/U15/Y (XNOR2X1)                            0.15       1.72 r
+  alu_1/mult_8/U14/Y (XNOR2X1)                            0.14       1.86 r
+  alu_1/mult_8/U13/Y (XNOR2X1)                            0.15       2.01 r
+  alu_1/mult_8/S2_4_25/YS (FAX1)                          0.28       2.29 r
+  alu_1/mult_8/S2_5_24/YS (FAX1)                          0.28       2.57 r
+  alu_1/mult_8/S2_6_23/YS (FAX1)                          0.28       2.85 r
+  alu_1/mult_8/S2_7_22/YS (FAX1)                          0.28       3.12 r
+  alu_1/mult_8/S2_8_21/YS (FAX1)                          0.28       3.40 r
+  alu_1/mult_8/S2_9_20/YS (FAX1)                          0.28       3.68 r
+  alu_1/mult_8/S2_10_19/YS (FAX1)                         0.28       3.96 r
+  alu_1/mult_8/S2_11_18/YS (FAX1)                         0.28       4.23 r
+  alu_1/mult_8/S2_12_17/YS (FAX1)                         0.28       4.51 r
+  alu_1/mult_8/S2_13_16/YS (FAX1)                         0.28       4.79 r
+  alu_1/mult_8/S2_14_15/YS (FAX1)                         0.28       5.07 r
+  alu_1/mult_8/S2_15_14/YS (FAX1)                         0.28       5.34 r
+  alu_1/mult_8/S2_16_13/YS (FAX1)                         0.28       5.62 r
+  alu_1/mult_8/S2_17_12/YS (FAX1)                         0.28       5.90 r
+  alu_1/mult_8/S2_18_11/YS (FAX1)                         0.28       6.18 r
+  alu_1/mult_8/S2_19_10/YS (FAX1)                         0.28       6.45 r
+  alu_1/mult_8/S2_20_9/YS (FAX1)                          0.28       6.73 r
+  alu_1/mult_8/S2_21_8/YS (FAX1)                          0.28       7.01 r
+  alu_1/mult_8/S2_22_7/YS (FAX1)                          0.28       7.29 r
+  alu_1/mult_8/S2_23_6/YS (FAX1)                          0.28       7.56 r
+  alu_1/mult_8/S2_24_5/YS (FAX1)                          0.28       7.84 r
+  alu_1/mult_8/S2_25_4/YS (FAX1)                          0.28       8.12 r
+  alu_1/mult_8/S2_26_3/YS (FAX1)                          0.28       8.40 r
+  alu_1/mult_8/S2_27_2/YS (FAX1)                          0.28       8.67 r
+  alu_1/mult_8/S2_28_1/YS (FAX1)                          0.26       8.93 f
+  alu_1/mult_8/S1_29_0/YC (FAX1)                          0.24       9.17 f
+  alu_1/mult_8/S1_30_0/YC (FAX1)                          0.25       9.42 f
+  alu_1/mult_8/S4_0/YS (FAX1)                             0.25       9.67 r
+  alu_1/mult_8/FS_1/A[29] (alu_DW01_add_1)                0.00       9.67 r
+  alu_1/mult_8/FS_1/SUM[29] (alu_DW01_add_1)              0.00       9.67 r
+  alu_1/mult_8/PRODUCT[31] (alu_DW02_mult_0)              0.00       9.67 r
+  alu_1/U4/Y (INVX2)                                      0.05       9.72 f
+  alu_1/U1/Y (AOI22X1)                                    0.09       9.81 r
+  alu_1/y[31] (alu)                                       0.00       9.81 r
+  U1230/Y (MUX2X1)                                        0.06       9.87 f
+  U1229/Y (INVX1)                                         0.05       9.92 r
+  aluoutM_reg[0]/D (DFFSR)                                0.00       9.92 r
+  data arrival time                                                  9.92
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  aluoutM_reg[0]/CLK (DFFSR)                              0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -9.92
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: rtE_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: aluoutM_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  rtE_reg[2]/CLK (DFFSR)                                  0.00 #     0.00 r
+  rtE_reg[2]/Q (DFFSR)                                    0.26       0.26 f
+  U1232/Y (INVX1)                                         0.06       0.32 r
+  U1231/Y (INVX1)                                         0.06       0.37 f
+  U1233/Y (NOR3X1)                                        0.08       0.46 r
+  U1235/Y (NAND2X1)                                       0.05       0.51 f
+  U1240/Y (NAND3X1)                                       0.07       0.58 r
+  U1242/Y (INVX1)                                         0.05       0.63 f
+  U1241/Y (NAND2X1)                                       0.08       0.71 r
+  U1244/Y (INVX1)                                         0.08       0.79 f
+  U1252/Y (INVX1)                                         0.06       0.85 r
+  U1250/Y (NOR2X1)                                        0.06       0.91 f
+  U1253/Y (AOI22X1)                                       0.08       0.99 r
+  U1257/Y (AND2X1)                                        0.08       1.07 r
+  U1256/Y (NAND2X1)                                       0.08       1.15 f
+  alu_1/b[28] (alu)                                       0.00       1.15 f
+  alu_1/mult_8/B[28] (alu_DW02_mult_0)                    0.00       1.15 f
+  alu_1/mult_8/U23/Y (AND2X2)                             0.14       1.29 f
+  alu_1/mult_8/U18/Y (XOR2X1)                             0.14       1.44 r
+  alu_1/mult_8/U17/Y (XNOR2X1)                            0.14       1.57 r
+  alu_1/mult_8/U15/Y (XNOR2X1)                            0.15       1.72 r
+  alu_1/mult_8/U14/Y (XNOR2X1)                            0.14       1.86 r
+  alu_1/mult_8/U13/Y (XNOR2X1)                            0.15       2.01 r
+  alu_1/mult_8/S2_4_25/YS (FAX1)                          0.28       2.29 r
+  alu_1/mult_8/S2_5_24/YS (FAX1)                          0.28       2.57 r
+  alu_1/mult_8/S2_6_23/YS (FAX1)                          0.26       2.83 f
+  alu_1/mult_8/S2_7_22/YC (FAX1)                          0.24       3.06 f
+  alu_1/mult_8/S2_8_22/YC (FAX1)                          0.25       3.32 f
+  alu_1/mult_8/S2_9_22/YS (FAX1)                          0.29       3.60 r
+  alu_1/mult_8/S2_10_21/YS (FAX1)                         0.28       3.88 r
+  alu_1/mult_8/S2_11_20/YS (FAX1)                         0.28       4.16 r
+  alu_1/mult_8/S2_12_19/YS (FAX1)                         0.28       4.44 r
+  alu_1/mult_8/S2_13_18/YS (FAX1)                         0.28       4.71 r
+  alu_1/mult_8/S2_14_17/YS (FAX1)                         0.28       4.99 r
+  alu_1/mult_8/S2_15_16/YS (FAX1)                         0.28       5.27 r
+  alu_1/mult_8/S2_16_15/YS (FAX1)                         0.28       5.55 r
+  alu_1/mult_8/S2_17_14/YS (FAX1)                         0.28       5.82 r
+  alu_1/mult_8/S2_18_13/YS (FAX1)                         0.28       6.10 r
+  alu_1/mult_8/S2_19_12/YS (FAX1)                         0.28       6.38 r
+  alu_1/mult_8/S2_20_11/YS (FAX1)                         0.28       6.66 r
+  alu_1/mult_8/S2_21_10/YS (FAX1)                         0.28       6.93 r
+  alu_1/mult_8/S2_22_9/YS (FAX1)                          0.28       7.21 r
+  alu_1/mult_8/S2_23_8/YS (FAX1)                          0.28       7.49 r
+  alu_1/mult_8/S2_24_7/YS (FAX1)                          0.28       7.77 r
+  alu_1/mult_8/S2_25_6/YS (FAX1)                          0.28       8.04 r
+  alu_1/mult_8/S2_26_5/YS (FAX1)                          0.28       8.32 r
+  alu_1/mult_8/S2_27_4/YS (FAX1)                          0.28       8.60 r
+  alu_1/mult_8/S2_28_3/YS (FAX1)                          0.28       8.88 r
+  alu_1/mult_8/S2_29_2/YS (FAX1)                          0.28       9.15 r
+  alu_1/mult_8/S2_30_1/YS (FAX1)                          0.28       9.43 r
+  alu_1/mult_8/S4_0/YS (FAX1)                             0.22       9.65 f
+  alu_1/mult_8/FS_1/A[29] (alu_DW01_add_1)                0.00       9.65 f
+  alu_1/mult_8/FS_1/SUM[29] (alu_DW01_add_1)              0.00       9.65 f
+  alu_1/mult_8/PRODUCT[31] (alu_DW02_mult_0)              0.00       9.65 f
+  alu_1/U4/Y (INVX2)                                      0.06       9.71 r
+  alu_1/U1/Y (AOI22X1)                                    0.07       9.78 f
+  alu_1/y[31] (alu)                                       0.00       9.78 f
+  U1290/Y (AND2X2)                                        0.12       9.90 f
+  aluoutM_reg[31]/D (DFFSR)                               0.00       9.90 f
+  data arrival time                                                  9.90
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  aluoutM_reg[31]/CLK (DFFSR)                             0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -9.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: rtE_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: aluoutM_reg[30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  rtE_reg[2]/CLK (DFFSR)                                  0.00 #     0.00 r
+  rtE_reg[2]/Q (DFFSR)                                    0.26       0.26 f
+  U1232/Y (INVX1)                                         0.06       0.32 r
+  U1231/Y (INVX1)                                         0.06       0.37 f
+  U1233/Y (NOR3X1)                                        0.08       0.46 r
+  U1235/Y (NAND2X1)                                       0.05       0.51 f
+  U1240/Y (NAND3X1)                                       0.07       0.58 r
+  U1242/Y (INVX1)                                         0.05       0.63 f
+  U1241/Y (NAND2X1)                                       0.08       0.71 r
+  U1245/Y (BUFX4)                                         0.13       0.84 r
+  U1343/Y (INVX2)                                         0.06       0.89 f
+  U1730/Y (AOI22X1)                                       0.09       0.98 r
+  U1736/Y (NAND3X1)                                       0.10       1.08 f
+  alu_1/b[29] (alu)                                       0.00       1.08 f
+  alu_1/mult_8/B[29] (alu_DW02_mult_0)                    0.00       1.08 f
+  alu_1/mult_8/syn402/Y (NAND2X1)                         0.14       1.23 r
+  alu_1/mult_8/U681/Y (XOR2X1)                            0.15       1.38 r
+  alu_1/mult_8/U696/Y (XOR2X1)                            0.18       1.56 r
+  alu_1/mult_8/U629/Y (XNOR2X1)                           0.14       1.70 r
+  alu_1/mult_8/U627/Y (XNOR2X1)                           0.13       1.83 r
+  alu_1/mult_8/U623/Y (XNOR2X1)                           0.13       1.97 r
+  alu_1/mult_8/U586/Y (XOR2X1)                            0.13       2.10 r
+  alu_1/mult_8/U585/Y (XNOR2X1)                           0.15       2.25 r
+  alu_1/mult_8/S2_5_25/YS (FAX1)                          0.28       2.53 r
+  alu_1/mult_8/S2_6_24/YS (FAX1)                          0.28       2.81 r
+  alu_1/mult_8/S2_7_23/YS (FAX1)                          0.28       3.09 r
+  alu_1/mult_8/S2_8_22/YS (FAX1)                          0.28       3.37 r
+  alu_1/mult_8/S2_9_21/YS (FAX1)                          0.28       3.64 r
+  alu_1/mult_8/S2_10_20/YS (FAX1)                         0.28       3.92 r
+  alu_1/mult_8/S2_11_19/YS (FAX1)                         0.28       4.20 r
+  alu_1/mult_8/S2_12_18/YS (FAX1)                         0.28       4.48 r
+  alu_1/mult_8/S2_13_17/YS (FAX1)                         0.28       4.75 r
+  alu_1/mult_8/S2_14_16/YS (FAX1)                         0.28       5.03 r
+  alu_1/mult_8/S2_15_15/YS (FAX1)                         0.28       5.31 r
+  alu_1/mult_8/S2_16_14/YS (FAX1)                         0.28       5.59 r
+  alu_1/mult_8/S2_17_13/YS (FAX1)                         0.28       5.86 r
+  alu_1/mult_8/S2_18_12/YS (FAX1)                         0.28       6.14 r
+  alu_1/mult_8/S2_19_11/YS (FAX1)                         0.28       6.42 r
+  alu_1/mult_8/S2_20_10/YS (FAX1)                         0.28       6.70 r
+  alu_1/mult_8/S2_21_9/YS (FAX1)                          0.28       6.97 r
+  alu_1/mult_8/S2_22_8/YS (FAX1)                          0.28       7.25 r
+  alu_1/mult_8/S2_23_7/YS (FAX1)                          0.28       7.53 r
+  alu_1/mult_8/S2_24_6/YS (FAX1)                          0.28       7.81 r
+  alu_1/mult_8/S2_25_5/YS (FAX1)                          0.28       8.08 r
+  alu_1/mult_8/S2_26_4/YS (FAX1)                          0.28       8.36 r
+  alu_1/mult_8/S2_27_3/YS (FAX1)                          0.28       8.64 r
+  alu_1/mult_8/S2_28_2/YS (FAX1)                          0.28       8.92 r
+  alu_1/mult_8/S2_29_1/YS (FAX1)                          0.28       9.19 r
+  alu_1/mult_8/S1_30_0/YS (FAX1)                          0.23       9.42 r
+  alu_1/mult_8/FS_1/A[28] (alu_DW01_add_1)                0.00       9.42 r
+  alu_1/mult_8/FS_1/SUM[28] (alu_DW01_add_1)              0.00       9.42 r
+  alu_1/mult_8/PRODUCT[30] (alu_DW02_mult_0)              0.00       9.42 r
+  alu_1/U406/Y (NAND2X1)                                  0.05       9.47 f
+  alu_1/U407/Y (NAND3X1)                                  0.11       9.58 r
+  alu_1/y[30] (alu)                                       0.00       9.58 r
+  U1945/Y (AND2X1)                                        0.07       9.65 r
+  aluoutM_reg[30]/D (DFFPOSX1)                            0.00       9.65 r
+  data arrival time                                                  9.65
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  aluoutM_reg[30]/CLK (DFFPOSX1)                          0.00      10.00 r
+  library setup time                                     -0.19       9.81
+  data required time                                                 9.81
+  --------------------------------------------------------------------------
+  data required time                                                 9.81
+  data arrival time                                                 -9.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.16
+
+
+1
