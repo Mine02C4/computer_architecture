@@ -8,7 +8,7 @@ Report : timing
         -max_paths 3
 Design : mipse
 Version: Z-2007.03-SP4
-Date   : Mon Aug  1 18:35:31 2016
+Date   : Mon Aug  1 22:42:02 2016
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
