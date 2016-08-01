@@ -133,19 +133,21 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 175 in file
+	in routine mipse line 137 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    writeregM_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
-|   writedataM_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|     aluoutM_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|    memtoregM_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    memtoregE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    regwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       rtE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       rdE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    memwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       rsE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 201 in file
+	in routine mipse line 209 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -175,16 +177,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 208 in file
-		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    regwriteW_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine mipse line 120 in file
+	in routine mipse line 124 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -195,31 +188,39 @@ Inferred memory devices in process
 |     regdstE_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |      rd1E_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
 |      rd2E_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    mult_opE_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |    signimmE_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 132 in file
+	in routine mipse line 182 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    memtoregE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    regwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|       rtE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-|       rdE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    memwriteE_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|       rsE_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    writeregM_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     aluoutM_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   writedataM_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    memtoregM_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine mipse line 184 in file
+	in routine mipse line 192 in file
 		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |    regwriteM_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 |    memwriteM_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mipse line 216 in file
+		'/home/ics16/ex1663/arc/contest16/contest/mipse.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    regwriteW_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Current design is now '/home/ics16/ex1663/arc/contest16/contest/mipse.db:mipse'
@@ -229,7 +230,7 @@ mipse
 current_design "mipse"
 Current design is 'mipse'.
 {mipse}
-create_clock -period 10.0 clk 
+create_clock -period 9.85 clk 
 1
 set_input_delay 2.2 -clock clk [find port "readdata*"]
 1
@@ -259,7 +260,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 6 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -289,36 +290,26 @@ Information: Updating design information... (UID-85)
   Processing 'mipse_DW01_cmp6_10'
   Processing 'alu_DW01_sub_0'
   Processing 'alu_DW01_add_0'
-  Processing 'alu_DW02_mult_0'
-  Processing 'alu_DW01_add_1'
+  Processing 'mipse_DW02_mult_0'
+  Processing 'mipse_DW01_add_2'
 
   Beginning Mapping Optimizations  (High effort)
   -------------------------------
-  Mapping Optimization (Phase 1)
-  Mapping Optimization (Phase 2)
-  Mapping Optimization (Phase 3)
-  Mapping Optimization (Phase 4)
 
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:31  539718.0      0.37       0.8      43.0                          
-    0:00:32  522982.0      0.36       0.8      43.0                          
-    0:00:33  522790.0      0.36       0.7      43.0                          
-    0:00:33  522798.0      0.34       0.7      43.0                          
-    0:00:33  522798.0      0.33       0.7      43.0                          
-    0:00:33  522798.0      0.33       0.7      43.0                          
-    0:00:33  522798.0      0.33       0.7      43.0                          
-    0:00:33  522798.0      0.33       0.7      43.0                          
-    0:00:34  522798.0      0.33       0.7      43.0                          
-    0:00:34  522798.0      0.33       0.7      43.0                          
-    0:00:34  522798.0      0.33       0.7      43.0                          
-    0:00:34  522798.0      0.33       0.7      43.0                          
-    0:00:34  522926.0      0.33       0.7       7.0                          
-    0:00:34  522942.0      0.33       0.7       0.0                          
-    0:00:34  522942.0      0.33       0.7       0.0                          
-    0:00:34  522942.0      0.33       0.7       0.0                          
-    0:00:34  522942.0      0.33       0.7       0.0                          
+    0:00:15  412193.0      0.00       0.0     141.0                          
+    0:00:16  400537.0      0.00       0.0     141.0                          
+    0:00:16  400537.0      0.00       0.0     141.0                          
+    0:00:16  400537.0      0.00       0.0     141.0                          
+    0:00:16  400537.0      0.00       0.0     141.0                          
+    0:00:16  400537.0      0.00       0.0     141.0                          
+    0:00:17  400569.0      0.00       0.0     132.0                          
+    0:00:17  400585.0      0.00       0.0     128.0                          
+    0:00:17  400585.0      0.00       0.0     128.0                          
+    0:00:17  400585.0      0.00       0.0     128.0                          
+    0:00:17  400585.0      0.00       0.0     128.0                          
 
 
   Beginning Delay Optimization Phase
@@ -327,20 +318,7 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:34  522942.0      0.33       0.7       0.0                          
-    0:00:36  523486.0      0.25       0.4      10.0 aluoutM_reg[0]/D         
-    0:00:38  524010.0      0.19       0.3      15.0 aluoutM_reg[0]/D         
-    0:00:40  524999.0      0.19       0.3      22.0                          
-    0:00:41  525755.0      0.09       0.1      24.0 aluoutM_reg[0]/D         
-    0:00:43  526083.0      0.07       0.1      24.0 aluoutM_reg[0]/D         
-    0:00:44  526299.0      0.06       0.1      25.0 aluoutM_reg[0]/D         
-    0:00:45  526755.0      0.05       0.0      24.0 aluoutM_reg[0]/D         
-    0:00:47  526811.0      0.04       0.0      24.0                          
-    0:00:48  526983.0      0.04       0.0      24.0 aluoutM_reg[0]/D         
-    0:00:49  527199.0      0.03       0.0      21.0 aluoutM_reg[0]/D         
-    0:01:08  527231.0      0.02       0.0      21.0                          
-    0:01:27  527215.0      0.01       0.0      21.0 aluoutM_reg[0]/D         
-    0:01:36  527183.0      0.00       0.0      21.0                          
+    0:00:17  400585.0      0.00       0.0     128.0                          
 
 
   Beginning Design Rule Fixing  (max_fanout)
@@ -349,8 +327,8 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:01:36  527183.0      0.00       0.0      21.0                          
-    0:01:38  527199.0      0.00       0.0       0.0                          
+    0:00:17  400585.0      0.00       0.0     128.0                          
+    0:00:18  401097.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (max_area 0)
@@ -359,46 +337,40 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:01:38  527199.0      0.00       0.0       0.0                          
-    0:01:38  527199.0      0.00       0.0       0.0                          
-    0:01:39  523839.0      0.01       0.0       0.0                          
-    0:01:40  522719.0      0.01       0.0       0.0                          
-    0:01:40  522447.0      0.01       0.0       0.0                          
-    0:01:40  522335.0      0.01       0.0       0.0                          
-    0:01:40  522279.0      0.01       0.0       0.0                          
-    0:01:40  522279.0      0.01       0.0       0.0                          
-    0:01:42  522335.0      0.00       0.0       0.0 aluoutM_reg[0]/D         
-    0:01:42  522335.0      0.00       0.0       0.0                          
-    0:01:43  522007.0      0.06       0.1       0.0                          
-    0:01:43  522007.0      0.06       0.1       0.0                          
-    0:01:43  522007.0      0.06       0.1       0.0                          
-    0:01:43  522007.0      0.06       0.1       0.0                          
-    0:01:43  522007.0      0.06       0.1       0.0                          
-    0:01:43  522007.0      0.06       0.1       0.0                          
-    0:01:44  522183.0      0.00       0.0       0.0 aluoutM_reg[0]/D         
-    0:01:50  522111.0      0.00       0.0       0.0                          
-    0:01:55  519195.0      0.00       0.0       0.0                          
-    0:01:55  519163.0      0.02       0.0       0.0                          
-    0:01:55  519163.0      0.02       0.0       0.0                          
-    0:01:55  519163.0      0.02       0.0       0.0                          
-    0:01:56  519163.0      0.02       0.0       0.0                          
-    0:01:56  519163.0      0.02       0.0       0.0                          
-    0:01:56  519163.0      0.02       0.0       0.0                          
-    0:01:58  519187.0      0.00       0.0       0.0                          
+    0:00:18  401097.0      0.00       0.0       0.0                          
+    0:00:18  401097.0      0.00       0.0       0.0                          
+    0:00:19  399577.0      0.00       0.0       0.0                          
+    0:00:20  399465.0      0.00       0.0       0.0                          
+    0:00:20  399433.0      0.00       0.0       0.0                          
+    0:00:20  399369.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:20  399353.0      0.00       0.0       0.0                          
+    0:00:24  396497.0      0.00       0.0       0.0                          
+    0:00:24  396497.0      0.00       0.0       0.0                          
+    0:00:24  396497.0      0.00       0.0       0.0                          
+    0:00:24  396497.0      0.00       0.0       0.0                          
+    0:00:24  396497.0      0.00       0.0       0.0                          
+    0:00:24  396497.0      0.00       0.0       0.0                          
 Loading db file '/home/cad/lib/osu_stdcells/lib/tsmc018/lib/osu018_stdcells.db'
 
   Optimization Complete
   ---------------------
 Warning: Design 'mipse' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-     Net 'clk': 1386 load(s), 1 driver(s)
+     Net 'clk': 1387 load(s), 1 driver(s)
 1
 redirect ./log/mipse.max.timing.log { report_timing -delay max -max_paths 3 }
 redirect ./log/mipse.power.log { report_power }
 write -hier -format verilog -output mipse.vnet
 Writing verilog file '/home/ics16/ex1663/arc/contest16/contest/mipse.vnet'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
-Warning: Verilog writer has added 32 nets to module alu_DW02_mult_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
-Warning: Verilog writer has added 32 nets to module alu using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module mipse_DW02_mult_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module mipse using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
 1
 quit
 Information: Defining new variable 'LIB_MAX_FILE'. (CMD-041)

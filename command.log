@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version Z-2007.03-SP4 for linux -- Aug 29, 2007
-#@ # Date:   Mon Aug  1 22:40:00 2016
+#@ # Date:   Tue Aug  2 00:11:28 2016
 #@ # Run by: ex1663@sirius
 #@ 
 
@@ -3787,7 +3787,7 @@ source -echo -verbose /home/ics16/ex1663/arc/contest16/contest/mipse.tcl
 #@ read_verilog rfile.v
 #@ read_verilog mipse.v
 #@ current_design "mipse"
-#@ create_clock -period 10.0 clk 
+#@ create_clock -period 9.85 clk 
 #@ set_input_delay 2.2 -clock clk [find port "readdata*"]
 #@ set_input_delay 2.2 -clock clk [find port "instr*"]
 #@ set_output_delay 2.2 -clock clk [find port "pc*"]

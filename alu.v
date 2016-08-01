@@ -10,7 +10,8 @@ module alu (
 	  s==`ALU_AND ? a & b:
 	  s==`ALU_OR ? a | b:
 	  s==`ALU_XOR ? a ^ b:
-	  s==`ALU_NOR ? ~ (a | b): 
-	  s==`ALU_MULT ?  (a * b): b;
+	  s==`ALU_NOR ? ~ (a | b):
+	  //s==`ALU_MULT ?  (a * b):
+	  b;
   assign zero = (y == 32'b0);
 endmodule

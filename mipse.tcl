@@ -8,7 +8,7 @@ read_verilog alu.v
 read_verilog rfile.v
 read_verilog mipse.v
 current_design "mipse"
-create_clock -period 10.0 clk 
+create_clock -period 9.85 clk 
 set_input_delay 2.2 -clock clk [find port "readdata*"]
 set_input_delay 2.2 -clock clk [find port "instr*"]
 set_output_delay 2.2 -clock clk [find port "pc*"]

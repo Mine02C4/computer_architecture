@@ -67,6 +67,9 @@ reg regwriteW;
 reg [`REG_W-1:0] writeregM;
 reg regwriteM;
 reg [`DATA_W-1:0] aluoutM;
+wire mult_opD;
+reg mult_opE;
+wire [`MULT_W-1:0] multoutE;
 reg slti_opE;
 wire [`REG_W-1:0] writeregE;
 wire lwstall, branchstall;
@@ -78,6 +81,7 @@ assign sw_opD = (opcodeD == `OP_SW);
 assign lw_opD = (opcodeD == `OP_LW);
 assign alu_opD = (opcodeD == `OP_REG) & (
 		(funcD[5:3] == 3'b100)|(funcD == `FUNC_MULT) );
+assign mult_opD = (opcodeD == `OP_REG) & (funcD == `FUNC_MULT);
 assign addi_opD = (opcodeD == `OP_ADDI);
 assign ori_opD = (opcodeD == `OP_ORI);
 assign lui_opD = (opcodeD == `OP_LUI);
@@ -91,7 +95,7 @@ assign memwriteD = sw_opD;
 rfile rfile_1(.clk(clk), .rd1(rd1D), .a1(rsD), .rd2(rd2D), .a2(rtD),
     .wd3(resultW), .a3(writeregW), .we3(regwriteW));
 
-assign alucomD = (addi_opD|lw_opD|sw_opD) ? 
+assign alucomD = (addi_opD|lw_opD|sw_opD) ?
 		`ALU_ADD: ori_opD ? `ALU_OR:
 		(lui_opD) ? `ALU_THB: (slti_opD) ? `ALU_SUB: funcD;
 
@@ -119,9 +123,10 @@ assign pcbranchD = pcplus4D + {signimmD[29:0],2'b00};
 // Pipeline data register 
 always @(posedge clk) begin
   if(!stall) begin
-	slti_opE<= slti_opD;
+	slti_opE <= slti_opD;
+	mult_opE <= mult_opD;
 	rd1E <= rd1fD;
-	rd2E <= rd2fD; 
+	rd2E <= rd2fD;
 	signimmE <= signimmD;
 	alucomE <= alucomD;
 	alusrcE <= ~alu_opD;
@@ -169,15 +174,18 @@ assign writedataE = regwriteM & rtE!=0 & writeregM == rtE ? aluoutM :
 assign srcbE = alusrcE ? signimmE : writedataE;
 assign writeregE = regdstE ? rdE: rtE;
 
+assign multoutE = srcaE[`MULT_W-1:0] * srcbE[`MULT_W-1:0];
+
 alu alu_1(.a(srcaE), .b(srcbE), .s(alucomE), .y(aluoutE));
 
 // Pipeline register 
 always @(posedge clk) begin
 	if(slti_opE) aluoutM <= {31'b0,aluoutE[31]};
+	else if(mult_opE) aluoutM <= {{(`DATA_W-`MULT_W){1'b0}}, multoutE};
 	else aluoutM <= aluoutE;
 		memtoregM <= memtoregE;
 		writedataM <= writedataE;
-		writeregM <= writeregE; 
+		writeregM <= writeregE;
 end
 
 // Pipeline control register with reset

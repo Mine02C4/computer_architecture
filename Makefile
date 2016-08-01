@@ -1,4 +1,5 @@
-.PHONY: contest test syn
+.PHONY: contest syn clean
+VFILES:=mipse.v alu.v rfile.v dmem.v imem.v
 POWERLOG:=log/mipse.power.log
 TIMINGLOG:=log/mipse.max.timing.log
 PROGDIRS:=prog_norm prog_swap prog_grade
@@ -22,18 +23,18 @@ contest.period: $(TIMINGLOG) mipse.tcl
 contest.power: $(POWERLOG)
 	grep 'Total Dynamic Power' log/mipse.power.log | sed -e 's/^.*\=[ ]*\([0-9\.]\+\) mW.*/\1/g' | tee contest.power
 
-$(POWERLOG): mipse.log
+$(POWERLOG) $(TIMINGLOG): mipse.log
 
-$(TIMINGLOG): mipse.log
+prog_%/contest.score: $(VFILES)
+	$(MAKE) -C $(@D)
 
-prog_%/contest.score: prog_%
-	$(MAKE) -C $<
-
-test:	test_mipse.v mipse.v alu.v rfile.v dmem.v imem.v
+a.out:	test_mipse.v mipse.v alu.v rfile.v dmem.v imem.v
 	iverilog test_mipse.v mipse.v alu.v rfile.v dmem.v imem.v
 syn:	mipse.log
 
 mipse.log: mipse.v alu.v rfile.v dmem.v imem.v mipse.tcl
 	dc_shell-t -f mipse.tcl | tee mipse.log
 
+clean:
+	rm contest.period contest.power $(PROGCONTESTSCORES)
 
