@@ -8,7 +8,7 @@ PROGCONTESTSCORES:=$(addsuffix /contest.score,$(PROGDIRS))
 PROGSCORES:= $(PROGBASESCORES) $(PROGCONTESTSCORES)
 BASEMUL=$(shell echo '$(foreach score, $(PROGBASESCORES), $(shell cat $(score)) *) 1' | bc)
 CONTESTMUL=$(shell echo '$(foreach score, $(PROGCONTESTSCORES), $(shell cat $(score)) *) 1' | bc)
-SLACK=$(shell grep 'slack' -m1 $(TIMINGLOG) | sed -e 's/[^0-9.]*\([0-9.]\+\)$$/\1/g')
+SLACK=$(shell grep 'slack' -m1 $(TIMINGLOG) | sed -e 's/[^0-9.-]*\([0-9.-]\+\)$$/\1/g')
 TARGETPERIOD=$(shell grep 'create_clock' mipse.tcl | sed -e 's/^[^0-9.]*\([0-9.]\+\)[^0-9.]*/\1/g')
 
 contest: score.score
