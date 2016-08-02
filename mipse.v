@@ -70,7 +70,7 @@ reg regwriteM;
 reg [`DATA_W-1:0] aluoutM;
 wire mult_opD;
 reg mult_opE;
-wire [`MULT_W-1:0] multoutE;
+wire [`DATA_W-1:0] multoutE;
 reg grade_opE;
 wire [2:0] gradeoutE;
 reg slti_opE;
@@ -179,7 +179,7 @@ assign writedataE = regwriteM & rtE!=0 & writeregM == rtE ? aluoutM :
 assign srcbE = alusrcE ? signimmE : writedataE;
 assign writeregE = regdstE ? rdE: rtE;
 
-assign multoutE = srcaE[`MULT_W-1:0] * srcbE[`MULT_W-1:0];
+assign multoutE = srcaE * srcbE;
 assign gradeoutE =
 	(srcaE >= 85) ? 5:
 	(srcaE < 85 && srcaE >= 60) ? 4:
@@ -192,7 +192,7 @@ alu alu_1(.a(srcaE), .b(srcbE), .s(alucomE), .y(aluoutE));
 // Pipeline register
 always @(posedge clk) begin
 	if(slti_opE) aluoutM <= {31'b0,aluoutE[31]};
-	else if(mult_opE) aluoutM <= {{(`DATA_W-`MULT_W){1'b0}}, multoutE};
+	else if(mult_opE) aluoutM <= multoutE;
 	else if(grade_opE) aluoutM <= {{(`DATA_W-3){1'b0}}, gradeoutE};
 	else aluoutM <= aluoutE;
 		memtoregM <= memtoregE;

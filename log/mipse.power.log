@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : mipse
 Version: Z-2007.03-SP4
-Date   : Tue Aug  2 02:30:35 2016
+Date   : Tue Aug  2 10:15:28 2016
 ****************************************
 
 
@@ -30,11 +30,11 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  19.9441 mW   (79%)
-  Net Switching Power  =   5.4367 mW   (21%)
+  Cell Internal Power  =  20.3126 mW   (76%)
+  Net Switching Power  =   6.2608 mW   (24%)
                          ---------
-Total Dynamic Power    =  25.3808 mW  (100%)
+Total Dynamic Power    =  26.5734 mW  (100%)
 
-Cell Leakage Power     = 717.1394 nW
+Cell Leakage Power     = 950.4231 nW
 
 1

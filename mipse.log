@@ -280,18 +280,19 @@ Information: Updating design information... (UID-85)
   ----------------------------------
   Processing 'mipse_DW01_cmp2_0'
   Processing 'mipse_DW01_cmp2_1'
-  Processing 'mipse_DW01_cmp2_2'
-  Processing 'mipse_DW01_cmp2_3'
   Processing 'mipse_DW01_cmp6_0'
   Processing 'mipse_DW01_cmp6_1'
+  Processing 'mipse_DW01_add_0'
   Processing 'mipse_DW01_cmp6_2'
   Processing 'mipse_DW01_cmp6_3'
-  Processing 'mipse_DW01_add_0'
   Processing 'mipse_DW01_cmp6_4'
   Processing 'mipse_DW01_cmp6_5'
+  Processing 'mipse_DW01_add_1'
+  Processing 'mipse_DW01_cmp2_2'
+  Processing 'mipse_DW01_cmp2_3'
+  Processing 'mipse_DW01_cmp2_4'
   Processing 'mipse_DW01_cmp6_6'
   Processing 'mipse_DW01_cmp6_7'
-  Processing 'mipse_DW01_add_1'
   Processing 'mipse_DW01_cmp6_8'
   Processing 'mipse_DW01_cmp6_9'
   Processing 'mipse_DW01_cmp6_10'
@@ -302,21 +303,31 @@ Information: Updating design information... (UID-85)
 
   Beginning Mapping Optimizations  (High effort)
   -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
 
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:16  415322.0      0.00       0.0     143.0                          
-    0:00:16  403738.0      0.00       0.0     143.0                          
-    0:00:17  403738.0      0.00       0.0     143.0                          
-    0:00:17  403738.0      0.00       0.0     143.0                          
-    0:00:17  403738.0      0.00       0.0     143.0                          
-    0:00:17  403738.0      0.00       0.0     143.0                          
-    0:00:17  403786.0      0.00       0.0     131.0                          
-    0:00:18  403802.0      0.00       0.0     128.0                          
-    0:00:18  403802.0      0.00       0.0     128.0                          
-    0:00:18  403802.0      0.00       0.0     128.0                          
-    0:00:18  403802.0      0.00       0.0     128.0                          
+    0:00:31  541974.0      0.28       0.3      27.0                          
+    0:00:32  525558.0      0.28       0.3      27.0                          
+    0:00:32  525542.0      0.26       0.3      27.0                          
+    0:00:33  525550.0      0.26       0.3      27.0                          
+    0:00:33  525542.0      0.26       0.3      27.0                          
+    0:00:33  525534.0      0.26       0.3      27.0                          
+    0:00:33  525542.0      0.26       0.3      27.0                          
+    0:00:33  525534.0      0.26       0.3      27.0                          
+    0:00:33  525542.0      0.26       0.3      27.0                          
+    0:00:34  525534.0      0.26       0.3      27.0                          
+    0:00:34  525534.0      0.26       0.3      27.0                          
+    0:00:34  525534.0      0.26       0.3      27.0                          
+    0:00:34  525582.0      0.27       0.3       3.0                          
+    0:00:34  525598.0      0.27       0.3       0.0                          
+    0:00:34  525598.0      0.27       0.3       0.0                          
+    0:00:34  525598.0      0.27       0.3       0.0                          
+    0:00:34  525598.0      0.27       0.3       0.0                          
 
 
   Beginning Delay Optimization Phase
@@ -325,7 +336,12 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:18  403802.0      0.00       0.0     128.0                          
+    0:00:34  525598.0      0.27       0.3       0.0                          
+    0:00:36  526818.0      0.15       0.1      10.0 aluoutM_reg[31]/D        
+    0:00:38  527138.0      0.12       0.1      10.0 aluoutM_reg[31]/D        
+    0:00:39  527454.0      0.10       0.1      15.0 aluoutM_reg[31]/D        
+    0:00:41  527901.0      0.10       0.1      18.0                          
+    0:00:42  527997.0      0.00       0.0      18.0                          
 
 
   Beginning Design Rule Fixing  (max_fanout)
@@ -334,8 +350,8 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:18  403802.0      0.00       0.0     128.0                          
-    0:00:19  404314.0      0.00       0.0       0.0                          
+    0:00:42  527997.0      0.00       0.0      18.0                          
+    0:00:42  527965.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (max_area 0)
@@ -344,26 +360,30 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:19  404314.0      0.00       0.0       0.0                          
-    0:00:19  404314.0      0.00       0.0       0.0                          
-    0:00:20  402802.0      0.00       0.0       0.0                          
-    0:00:21  402674.0      0.00       0.0       0.0                          
-    0:00:21  402610.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:21  402546.0      0.00       0.0       0.0                          
-    0:00:25  399714.0      0.00       0.0       0.0                          
-    0:00:25  399714.0      0.00       0.0       0.0                          
-    0:00:25  399714.0      0.00       0.0       0.0                          
-    0:00:25  399714.0      0.00       0.0       0.0                          
-    0:00:25  399714.0      0.00       0.0       0.0                          
-    0:00:25  399714.0      0.00       0.0       0.0                          
+    0:00:42  527965.0      0.00       0.0       0.0                          
+    0:00:42  527965.0      0.00       0.0       0.0                          
+    0:00:43  524605.0      0.03       0.0       0.0                          
+    0:00:44  523645.0      0.03       0.0       0.0                          
+    0:00:45  523485.0      0.03       0.0       0.0                          
+    0:00:45  523421.0      0.03       0.0       0.0                          
+    0:00:45  523405.0      0.03       0.0       0.0                          
+    0:00:45  523405.0      0.03       0.0       0.0                          
+    0:00:46  523493.0      0.00       0.0       0.0                          
+    0:00:46  523221.0      0.04       0.0       0.0                          
+    0:00:46  523173.0      0.04       0.0       0.0                          
+    0:00:46  523173.0      0.04       0.0       0.0                          
+    0:00:46  523173.0      0.04       0.0       0.0                          
+    0:00:46  523173.0      0.04       0.0       0.0                          
+    0:00:46  523173.0      0.04       0.0       0.0                          
+    0:00:46  523173.0      0.04       0.0       0.0                          
+    0:00:51  520381.0      0.00       0.0       0.0                          
+    0:00:51  520365.0      0.02       0.0       0.0                          
+    0:00:51  520365.0      0.02       0.0       0.0                          
+    0:00:51  520365.0      0.02       0.0       0.0                          
+    0:00:51  520365.0      0.02       0.0       0.0                          
+    0:00:51  520365.0      0.02       0.0       0.0                          
+    0:00:51  520365.0      0.02       0.0       0.0                          
+    0:00:52  520381.0      0.00       0.0       0.0                          
 Loading db file '/home/cad/lib/osu_stdcells/lib/tsmc018/lib/osu018_stdcells.db'
 
   Optimization Complete
@@ -376,9 +396,10 @@ redirect ./log/mipse.power.log { report_power }
 write -hier -format verilog -output mipse.vnet
 Writing verilog file '/home/ics16/ex1663/arc/contest16/contest/mipse.vnet'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
-Warning: Verilog writer has added 16 nets to module mipse_DW02_mult_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
-Warning: Verilog writer has added 16 nets to module mipse using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 32 nets to module mipse_DW02_mult_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 32 nets to module mipse using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
 1
 quit
+Information: Defining new variable 'LIB_MAX_FILE'. (CMD-041)
 
 Thank you...
