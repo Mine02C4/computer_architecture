@@ -1,4 +1,4 @@
-.PHONY: contest syn clean
+.PHONY: contest syn clean subdir
 VFILES:=mipse.v alu.v rfile.v dmem.v imem.v
 POWERLOG:=log/mipse.power.log
 TIMINGLOG:=log/mipse.max.timing.log
@@ -25,7 +25,9 @@ contest.power: $(POWERLOG)
 
 $(POWERLOG) $(TIMINGLOG): mipse.log
 
-prog_%/contest.score: $(VFILES)
+prog_%/contest.score: $(VFILES) subdir
+
+subdir:
 	$(MAKE) -C $(@D)
 
 a.out:	test_mipse.v mipse.v alu.v rfile.v dmem.v imem.v
