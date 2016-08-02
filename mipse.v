@@ -19,19 +19,19 @@ wire btakenD;
 
 assign pcplus4F = pc + 4;
 
-always @(posedge clk or negedge rst_n) 
+always @(posedge clk or negedge rst_n)
 begin 
    if(!rst_n) instrD <= 0;
    else if(!stall) instrD <= instr;
 end
 
-always @(posedge clk or negedge rst_n) 
+always @(posedge clk or negedge rst_n)
 begin 
    if(!rst_n) pcplus4D <= 0;
    else if(!stall) pcplus4D <= pcplus4F;
 end
 
-always @(posedge clk or negedge rst_n) 
+always @(posedge clk or negedge rst_n)
 begin 
    if(!rst_n) pc <= 0;
    else if(!stall & btakenD)
@@ -119,12 +119,12 @@ assign rd2fD = (rtD !=0) & (rtD == writeregM) & regwriteM  ? aluoutM: rd2D ;
 // Branch
 assign btakenD = beq_opD & (rd1fD == rd2fD) | bne_opD & (rd1fD != rd2fD);
 
-assign signimmD = ori_opD ?  {16'b0,immD} : 
-				lui_opD ? {immD, 16'b0} : 
+assign signimmD = ori_opD ?  {16'b0,immD} :
+				lui_opD ? {immD, 16'b0} :
 				{{16{immD[15]}},immD} ;
 assign pcbranchD = pcplus4D + {signimmD[29:0],2'b00};
 
-// Pipeline data register 
+// Pipeline data register
 always @(posedge clk) begin
   if(!stall) begin
 	slti_opE <= slti_opD;
