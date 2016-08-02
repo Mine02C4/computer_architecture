@@ -5,8 +5,6 @@ loop:
 	grade $5,$3
 	bne $1,$0, loop
 	sw $5,400($1)
-	beq $0,$0,exit
-	add $0,$0,$0
 exit:
 	sw  $3, 0x7fff($0)
 end: beq $0,$0,end
