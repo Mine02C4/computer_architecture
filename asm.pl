@@ -35,7 +35,7 @@ my $data_width = 16; # bit width of data
 'ori'   => '001101, $r2.5, $r1.5, $imm.16',
 'slti'  => '001010, $r2.5, $r1.5, $imm.16',
 'lui'   => '001111, 00000, $r1.5, $imm.16',
-'grade' => '001100, $r2.5, $r1.5, 0000000000000000',
+'grade' => '001100, $r2.5, $r1.5, $imm.16',
 #          opcode|$1(5bits)|$2(5bits)|relative_label(16bits)
 'beq'   => '000100, $r1.5, $r2.5, $relLbl.16',
 'bne'   => '000101, $r1.5, $r2.5, $relLbl.16',
@@ -47,6 +47,7 @@ my $data_width = 16; # bit width of data
 'sb'    => '101000, $base.5, $r1.5, $offset.16',
 'lw'    => '100011, $base.5, $r1.5, $offset.16',
 'sw'    => '101011, $base.5, $r1.5, $offset.16',
+'grade' => '101100, $base.5, $r1.5, $offset.16',
 #          data($data_width(default 8bits))
 '.dw'   => '$data.'.$data_width.', $zero.'.($isa_width - $data_width)
 );
@@ -67,7 +68,6 @@ my $data_width = 16; # bit width of data
 'ori'  => '\$[0-9]+[\t\s]*,[\t\s]*\$[0-9]+[\t\s]*,[\t\s]*\-?[0-9a-fA-FxX]+',
 'slti'  => '\$[0-9]+[\t\s]*,[\t\s]*\$[0-9]+[\t\s]*,[\t\s]*\-?[0-9a-fA-FxX]+',
 'lui'   => '\$[0-9]+[\t\s]*,[\t\s]*\-?[0-9a-fA-FxX]+',
-'grade' => '\$[0-9]+[\t\s]*,[\t\s]*\$[0-9]+',
 'beq'   => '\$[0-9]+[\t\s]*,[\t\s]*\$[0-9]+[\t\s]*,[\t\s]*[a-zA-Z_]\w*',
 'bne'   => '\$[0-9]+[\t\s]*,[\t\s]*\$[0-9]+[\t\s]*,[\t\s]*[a-zA-Z_]\w*',
 'j'     => '[a-zA-Z_]\w*',
@@ -76,6 +76,7 @@ my $data_width = 16; # bit width of data
 'sb'    => '\$[0-9]+[\t\s]*,[\t\s]*[0-9a-fA-FxX]+[\t\s]*\([\t\s]*\$[0-9]+\)',
 'lw'    => '\$[0-9]+[\t\s]*,[\t\s]*[0-9a-fA-FxX]+[\t\s]*\([\t\s]*\$[0-9]+\)',
 'sw'    => '\$[0-9]+[\t\s]*,[\t\s]*[0-9a-fA-FxX]+[\t\s]*\([\t\s]*\$[0-9]+\)',
+'grade' => '\$[0-9]+[\t\s]*,[\t\s]*[0-9a-fA-FxX]+[\t\s]*\([\t\s]*\$[0-9]+\)',
 '.dw'   => '[0-9]+'
 );
 

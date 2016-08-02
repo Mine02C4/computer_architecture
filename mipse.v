@@ -94,7 +94,7 @@ assign beq_opD = (opcodeD == `OP_BEQ);
 assign bne_opD = (opcodeD == `OP_BNE);
 assign branchD = beq_opD | bne_opD;
 
-assign memwriteD = sw_opD;
+assign memwriteD = sw_opD | grade_opD;
 
 rfile rfile_1(.clk(clk), .rd1(rd1D), .a1(rsD), .rd2(rd2D), .a2(rtD),
     .wd3(resultW), .a3(writeregW), .we3(regwriteW));
@@ -103,7 +103,7 @@ assign alucomD = (addi_opD|lw_opD|sw_opD|grade_opD) ?
 		`ALU_ADD: ori_opD ? `ALU_OR:
 		(lui_opD) ? `ALU_THB: (slti_opD) ? `ALU_SUB: funcD;
 
-assign regwriteD = lw_opD | alu_opD | lui_opD | grade_opD | addi_opD | ori_opD | slti_opD ;
+assign regwriteD = lw_opD | alu_opD | lui_opD | addi_opD | ori_opD | slti_opD ;
 assign memtoregD = lw_opD ;
 
 // Stall
@@ -181,10 +181,10 @@ assign writeregE = regdstE ? rdE: rtE;
 
 assign multoutE = srcaE * srcbE;
 assign gradeoutE =
-	(srcaE >= 85) ? 5:
-	(srcaE < 85 && srcaE >= 60) ? 4:
-	(srcaE < 60 && srcaE >= 40) ? 3:
-	(srcaE < 40 && srcaE >= 10) ? 2:
+	(writedataE >= 85) ? 5:
+	(writedataE < 85 && writedataE >= 60) ? 4:
+	(writedataE < 60 && writedataE >= 40) ? 3:
+	(writedataE < 40 && writedataE >= 10) ? 2:
 	1;
 
 alu alu_1(.a(srcaE), .b(srcbE), .s(alucomE), .y(aluoutE));
@@ -193,10 +193,10 @@ alu alu_1(.a(srcaE), .b(srcbE), .s(alucomE), .y(aluoutE));
 always @(posedge clk) begin
 	if(slti_opE) aluoutM <= {31'b0,aluoutE[31]};
 	else if(mult_opE) aluoutM <= multoutE;
-	else if(grade_opE) aluoutM <= {{(`DATA_W-3){1'b0}}, gradeoutE};
 	else aluoutM <= aluoutE;
 		memtoregM <= memtoregE;
-		writedataM <= writedataE;
+	if(grade_opE) writedataM <= {{(`DATA_W-3){1'b0}}, gradeoutE};
+	else writedataM <= writedataE;
 		writeregM <= writeregE;
 end
 
